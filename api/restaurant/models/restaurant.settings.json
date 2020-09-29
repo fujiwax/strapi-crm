@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurants",
+  "info": {
+    "name": "restaurant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "restaurants"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "opening_hours": {
+      "type": "component",
+      "repeatable": true,
+      "component": "restaurant.opening-hours"
+    }
+  }
+}

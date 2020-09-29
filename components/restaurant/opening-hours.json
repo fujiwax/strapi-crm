@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_restaurant_opening_hours",
+  "info": {
+    "name": "Opening hours",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "day_interval": {
+      "type": "string"
+    },
+    "Opening_time": {
+      "type": "time"
+    },
+    "Closing_time": {
+      "type": "time"
+    }
+  }
+}
